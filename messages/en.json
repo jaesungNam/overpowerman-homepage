@@ -1,5 +1,7 @@
 {
   "HomePage": {
-    "title": "Hello world!"
+    "welcome": "Welcome.",
+    "title": "overpowerman's homepage",
+    "content": "life is good"
   }
 }

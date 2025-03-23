@@ -1,5 +1,7 @@
 {
   "HomePage": {
-    "title": "안녕 세상아!"
+    "welcome": "환영합니다.",
+    "title": "overpowerman 의 홈페이지",
+    "content": "인생 좋다."
   }
 }
