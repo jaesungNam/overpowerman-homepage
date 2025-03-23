@@ -71,12 +71,12 @@ const Page = async ({
   params,
   searchParams,
 }: {
-  searchParams?: {
+  searchParams: Promise<{
     v?: string;
-  };
+  }>;
   params: Promise<{ path: string }>;
 }) => {
-  const version = (await searchParams)?.v;
+  const version = (await searchParams).v;
   const { path } = await params;
 
   const result = await getTermPageId(path, version);
