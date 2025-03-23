@@ -1,4 +1,5 @@
 import '@mantine/core/styles.css';
+import 'react-notion-x/src/styles.css';
 
 import React from 'react';
 import { Metadata } from 'next';
