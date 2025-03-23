@@ -6,8 +6,6 @@ import { getLocale } from 'next-intl/server';
 import { ColorSchemeScript, mantineHtmlProps, MantineProvider } from '@mantine/core';
 import { theme } from '../../theme';
 
-export const revalidate = 10;
-
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
   const locale = await getLocale();
 
