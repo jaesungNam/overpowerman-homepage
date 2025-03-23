@@ -1,14 +1,10 @@
 import '@mantine/core/styles.css';
 
 import React from 'react';
+import { Metadata } from 'next';
 import { getLocale } from 'next-intl/server';
 import { ColorSchemeScript, mantineHtmlProps, MantineProvider } from '@mantine/core';
 import { theme } from '../../theme';
-
-export const metadata = {
-  title: 'Mantine Next.js template',
-  description: 'I am using Mantine with Next.js!',
-};
 
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
   const locale = await getLocale();
@@ -29,3 +25,13 @@ export default async function RootLayout({ children }: { children: React.ReactNo
     </html>
   );
 }
+
+export const metadata: Metadata = {
+  title: 'Overpowerman | 오버파워맨',
+  description: 'overpowerman 의 홈페이지입니다.',
+  openGraph: {
+    type: 'website',
+    title: 'Overpowerman | 오버파워맨 OG',
+    description: '디스크립션 Overpowerman | 오버파워맨 OG',
+  },
+};

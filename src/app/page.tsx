@@ -10,8 +10,3 @@ export default function HomePage() {
     </>
   );
 }
-
-export const metadata: Metadata = {
-  title: 'Overpowerman | 오버파워맨',
-  description: 'overpowerman 의 홈페이지입니다.',
-};
