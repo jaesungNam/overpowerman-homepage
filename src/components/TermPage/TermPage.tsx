@@ -1,15 +1,28 @@
 'use client';
 
-import { NotionRenderer } from 'react-notion-x';
+import React, { useRef } from 'react';
+import { useRouter } from 'next/navigation';
+import { useMutation, useQueryClient } from '@tanstack/react-query';
+import { useForm } from 'react-hook-form';
+import { Box, Button, Stack, Text, TextInput } from '@mantine/core';
+import * as termApi from '@/apis/termApi';
+import TinymceEditor, { Editor } from '@/components/TinymceEditor';
+import { Term } from '@/types/terms';
 
-export type TermPageProps = {
-  recordMap: any;
+export type TermDetailPageProps = {
+  term: Term;
 };
 
-const TermPage: React.FC<TermPageProps> = (props) => {
-  const { recordMap } = props;
+const TermPage: React.FC<TermDetailPageProps> = (props) => {
+  const { term } = props;
 
-  return <NotionRenderer recordMap={recordMap} />;
+  return (
+    <Box
+      dangerouslySetInnerHTML={{
+        __html: term.content || '',
+      }}
+    />
+  );
 };
 
 export default TermPage;

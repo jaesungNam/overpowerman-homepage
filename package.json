@@ -30,11 +30,13 @@
     "@tinymce/tinymce-react": "^6.0.0",
     "@types/accept-language-parser": "^1.5.7",
     "accept-language-parser": "^1.5.0",
+    "axios": "^1.8.4",
     "next": "15.2.3",
     "next-intl": "^4.0.2",
     "notion-client": "^7.3.0",
     "react": "19.0.0",
     "react-dom": "19.0.0",
+    "react-hook-form": "^7.55.0",
     "react-notion-x": "^7.3.0",
     "tinymce": "^7.7.2"
   },

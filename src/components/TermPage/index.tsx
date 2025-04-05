@@ -1,3 +1,2 @@
-import TermPage from './TermPage';
-
-export default TermPage;
+export * from './TermPage';
+export { default } from './TermPage';

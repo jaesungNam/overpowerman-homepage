@@ -1,5 +1,5 @@
 import { notFound } from 'next/navigation';
-import TermPage from '@/components/TermPage';
+import TermDetailPage from '@/components/TermDetailPage';
 import { getTerm } from '@/utils/s3Utils';
 
 type TermDetailPageParams = {
@@ -24,7 +24,7 @@ const Page = async (props: {
     return notFound();
   }
 
-  return <TermPage term={term} />;
+  return <TermDetailPage term={term} />;
 };
 
 export default Page;

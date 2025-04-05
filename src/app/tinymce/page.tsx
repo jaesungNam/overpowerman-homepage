@@ -3,7 +3,7 @@
 import dynamic from 'next/dynamic';
 import { Loader, LoadingOverlay } from '@mantine/core';
 
-const TinymcePage = dynamic(() => import('@/components/TinymcePage'), {
+const TinymcePage = dynamic(() => import('../../components/TinymceEditor/TinymceEditor'), {
   loading: () => <Loader />,
   ssr: false,
 });
