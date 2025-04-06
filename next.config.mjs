@@ -9,10 +9,7 @@ const withBundleAnalyzer = bundleAnalyzer({
 
 export default withBundleAnalyzer(
   withNextIntl({
-    reactStrictMode: false,
-    eslint: {
-      ignoreDuringBuilds: true,
-    },
+    output: 'standalone',
     experimental: {
       optimizePackageImports: ['@mantine/core', '@mantine/hooks'],
     },

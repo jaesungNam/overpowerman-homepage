@@ -1,15 +1,23 @@
 'use client';
 
-import { NotionRenderer } from 'react-notion-x';
+import React from 'react';
+import { Box } from '@mantine/core';
+import { Term } from '@/types/terms';
 
-export type TermPageProps = {
-  recordMap: any;
+export type TermDetailPageProps = {
+  term: Term;
 };
 
-const TermPage: React.FC<TermPageProps> = (props) => {
-  const { recordMap } = props;
+const TermPage: React.FC<TermDetailPageProps> = (props) => {
+  const { term } = props;
 
-  return <NotionRenderer recordMap={recordMap} />;
+  return (
+    <Box
+      dangerouslySetInnerHTML={{
+        __html: term.content || '',
+      }}
+    />
+  );
 };
 
 export default TermPage;
