@@ -4,9 +4,8 @@ import 'react-notion-x/src/styles.css';
 import React from 'react';
 import { Metadata } from 'next';
 import { getLocale } from 'next-intl/server';
-import { ColorSchemeScript, mantineHtmlProps, MantineProvider } from '@mantine/core';
+import { ColorSchemeScript, mantineHtmlProps } from '@mantine/core';
 import Providers from '@/providers';
-import { theme } from '../theme';
 
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
   const locale = await getLocale();

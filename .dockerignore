@@ -1,0 +1,35 @@
+# Node modules & dependencies
+node_modules
+npm-debug.log
+.yarn
+.pnpm-store
+
+# Git & OS
+.git
+.gitignore
+.DS_Store
+
+# Local env/config
+.env
+.env.local
+.env.*.local
+
+# Editor files
+.vscode
+.idea
+
+# Docker-specific
+Dockerfile*
+.dockerignore
+
+# Build output (except the final standalone folder)
+.next
+!.next/standalone
+!.next/static
+
+# Test & Docs
+__tests__
+coverage
+*.test.js
+*.spec.js
+docs

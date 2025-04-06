@@ -7,16 +7,15 @@ type TermDetailPageParams = {
 };
 
 const Page = async (props: {
-  params: TermDetailPageParams;
+  params: Promise<TermDetailPageParams>;
   searchParams?: Promise<{
     versionId?: string;
   }>;
 }) => {
-  const {
-    params: { path },
-    searchParams,
-  } = props;
-  const versionId = (await searchParams)?.versionId;
+  const params = await props.params;
+  const searchParams = await props.searchParams;
+  const path = params.path;
+  const versionId = searchParams?.versionId;
 
   const term = await getTerm(path, versionId);
 

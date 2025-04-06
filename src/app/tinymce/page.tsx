@@ -1,7 +1,7 @@
 'use client';
 
 import dynamic from 'next/dynamic';
-import { Loader, LoadingOverlay } from '@mantine/core';
+import { Loader } from '@mantine/core';
 
 const TinymcePage = dynamic(() => import('../../components/TinymceEditor/TinymceEditor'), {
   loading: () => <Loader />,
